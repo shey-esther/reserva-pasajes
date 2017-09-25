@@ -5,6 +5,7 @@
 }
 
 body{
+  background-color: rgba(179, 4, 34, 0.86);
   color:black;
 }
 
@@ -20,4 +21,13 @@ table {
   margin: 5%;
   /* max-width: 50%; */
   background-color: transparent;
+}
+
+h2 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+tr{
+  background-color: rgba(247, 112, 136, 0.53);
 }
