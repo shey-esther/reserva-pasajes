@@ -49,6 +49,45 @@ cancelar (buscarConDNI) {
  		}
 	}
 }
+mostrar (datos) {
+  	var cuadro = "<table>"
+  	for (var i = 0; i < this.asientoNr.length; i++) {
+      var ps = this.asientoNr[i];
+      datos.innerHTML += ps.listar();
+    	// cuadro +="<tr><td>N°ASIENTO:"+asiento[i].asientoNr+"</td>"+
+    	// "<td>NOMBRE:"+asiento[i].nombre+"</td>"+
+    	// "<td>APELLIDO:"+asiento[i].apellido+"</td>"+
+   		// "<td>DNI:"+asiento[i].dni+"</td></tr>";
+  	}
+  	// cuadro+="</table>"
+  	// document.getElementById("resultado").innerHTML=cuadro;
+}
+limpiar () {
+  	document.getElementById("nombre").value="";
+  	document.getElementById("apellidos").value=" ";
+    document.getElementById("dni").value=" ";
+    document.getElementById("mostrar").innerHTML =" ";
+}
+redirect (event) {
+	// limpiar();
+    // document.getElementById("mostrar").innerHTML=(event.target.textContent);
+   	celditass = event.textContent;
+  	n_asiento = parseInt(celditass);
+  	// console.log(n_asiento);//me muestra el numero de asiento reservad
+   	for (var i = 0; i < this.asientoNr.length; i++) {
+   		var ps = (asiento[i].asientoNr);
+
+   		// console.log(ps);//muestra el numero de asientos ya reservados los compara y al hacer el clic muestra los datos
+
+		if(n_asiento==this.ps){
+		  document.getElementById("nombre").value = ps.nombre;
+		  document.getElementById("apellidos").value = ps.apellido;
+		  document.getElementById("dni").value = ps.dni;
+      document.getElementById("mostrar").innerHTML =" ";
+		}
+  }
+  this.celda = event;
+}
 
 }
 
@@ -67,6 +106,7 @@ cancelar (buscarConDNI) {
 // 	for (var i = 0; i < asientos.length; i++) {
 //     	asientos[i].addEventListener('click',redirect,false);
 // }
+
 
 // function redirect(event){
 // 	limpiar();
