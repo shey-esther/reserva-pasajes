@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Anton|Chewy|Shrikhand');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  color:black;
+}
+
+td {
+  border: 2px solid black;
+  padding: 4%;
+}
+
+table {
+  width: 80%;
+  /* margin-top: 5%; */
+  /* margin: 10%; */
+  margin: 5%;
+  /* max-width: 50%; */
+  background-color: transparent;
+}
