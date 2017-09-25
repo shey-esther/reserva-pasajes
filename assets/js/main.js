@@ -1,6 +1,6 @@
 // aqui el codigo js
 
-class Pasajeros {
+class datosPasajero {
     constructor(nroAsiento, nombre, apellido, dnipasajero){
       this.nroAsiento = nroAsiento;
       this.nombre = nombre;
@@ -18,17 +18,46 @@ class Pasajeros {
 }
 class reservar {
   constructor () {
-    this.general = undefined;
+    this.celdita = undefined;
     this.asientoNr = [];
-    
   }
+  agregarPsj (datosPasajero) {
+    this.asientoNr.push(datosPasajero);
+    this.celdita.style.backgroundColor = 'red';
+  }
+  buscar (buscarConDNI) {
+	for (var i = 0; i < asientoNr.length; i++) {
+		   	var ps = this.asientoNr[i];
+		if(buscarConDNI == ps.dnipasajero){
+			document.getElementById("nombre").value = ps.nombre;
+  		document.getElementById("apellidos").value=ps.apellido;
+ 			document.getElementById("dni").value=ps.dnipasajero;
+ 		}
+ 	}
+}
+cancelar (buscarConDNI) {
+// limpiar();
+// var n_asiento = document.getElementById("mostrar").textContent;
+// console.log(n_asiento);
+	
+ 	for (var i = 0; i < this.asientoNr.length; i++) {
+    	var ps = this.asientoNr[i];
+		if(ps.asientoNr == buscarConDNI){
+			 asiento.splice(i,1);
+			//  console.log(asiento);
+			this.celdita.style.backgroundColor="transparent";
+ 		}
+	}
 }
 
+}
+
+
+
+
+
+
 //  //generando tabla jq
-
-
-
-
 // var celdita;
 // var n_asiento;
 // var asiento =[];//el arreglo con el numero de todo los asientos almacenados
